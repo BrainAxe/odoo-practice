@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <report
+        id="report_course_info"
+        string="Course Info"
+        model="openacademy.course"
+        report_type="qweb-pdf"
+        name="openacademy.report_course"
+        file="openacademy.report_course"
+    />
+    <report
+        id="action_report_course"
+        string="Courses"
+        model="openacademy.course"
+        report_type="qweb-pdf"
+        name="openacademy.report_courses"
+        file="openacademy.report_courses"
+    />
+</odoo>

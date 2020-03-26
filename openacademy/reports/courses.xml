@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_courses">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <div class="oe_structure"/>
+                    <div class="row">
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:left;"><strong>Name </strong></th>
+                                    <th style="text-align:left;"><strong>Description </strong></th>
+                                    <th style="text-align:left;"><strong>Created At </strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="courses" t-as="o">
+                                    <tr>
+                                        <td style="text-align:left;">
+                                            <t t-esc="o[1]"/>
+                                        </td>
+                                        <td style="text-align:left;">
+                                            <t t-esc="o[2]"/>
+                                        </td>
+                                        <td style="text-align:left;">
+                                            <t t-esc="o[5]"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+
+</odoo>
