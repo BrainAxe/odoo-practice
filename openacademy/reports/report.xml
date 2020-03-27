@@ -15,5 +15,6 @@
         report_type="qweb-pdf"
         name="openacademy.report_courses"
         file="openacademy.report_courses"
+        menu="False"
     />
 </odoo>
