@@ -19,13 +19,13 @@
                                 <t t-foreach="courses" t-as="o">
                                     <tr>
                                         <td style="text-align:left;">
-                                            <t t-esc="o[1]"/>
+                                            <t t-esc="o['name']"/>
                                         </td>
                                         <td style="text-align:left;">
-                                            <t t-esc="o[2]"/>
+                                            <t t-esc="o['description']"/>
                                         </td>
                                         <td style="text-align:left;">
-                                            <t t-esc="o[5]"/>
+                                            <t t-esc="o['create_date']"/>
                                         </td>
                                     </tr>
                                 </t>
