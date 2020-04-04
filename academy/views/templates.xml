@@ -1,16 +1,31 @@
 <odoo>
     <data>
          <template id="index">
+             <xpath expr="//div[@id='wrapwrap']" position="after">
+                 <script type="text/javascript" src="/academy/static/src/js/Chart.min.js"></script>
+                 <script type="text/javascript" src="/academy/static/src/js/my_js.js"></script>
+             </xpath>
              <t t-call="website.layout">
                  <t t-set="title">Academy</t>
                  <div class="oe_structure">
                      <div class="container">
-                         <t t-foreach="teachers" t-as="teacher">
-                             <p><t t-esc="teacher.id"/> <t t-esc="teacher.name" /></p>
-                         </t>
+<!--                         <t t-foreach="teachers" t-as="teacher">-->
+<!--                             <p><t t-esc="teacher.id"/> <t t-esc="teacher.name" /></p>-->
+<!--                         </t>-->
+
+                     <div class="row">
+                        <div class="col-xs-6">
+                            <canvas id="myChart" width="400" height="200"> </canvas>
+                        </div>
+                        <div class="col-xs-6">
+                            <canvas id="myChart2" width="400" height="200"> </canvas>
+                        </div>
+                     </div>
+
                      </div>
                  </div>
              </t>
+
          </template>
         <!-- <template id="object"> -->
         <!--   <h1><t t-esc="object.display_name"/></h1> -->
