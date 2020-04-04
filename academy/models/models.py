@@ -13,3 +13,20 @@ class Teachers(models.Model):
 #     @api.depends('value')
 #     def _value_pc(self):
 #         self.value2 = float(self.value) / 100
+
+
+class Cities(models.Model):
+    _name = 'academy.cities'
+
+    name = fields.Char()
+    population = fields.Integer()
+
+    @api.model
+    def get_cities_info(self):
+        records = self.env['academy.cities'].search([],order="population desc")
+        context = {}
+        for record in records:
+            context[record.name] = record.population
+        return context
+
+
