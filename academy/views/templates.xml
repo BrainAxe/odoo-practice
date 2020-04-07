@@ -1,7 +1,7 @@
 <odoo>
     <data>
          <template id="index">
-             <xpath expr="//div[@id='wrapwrap']" position="after">
+             <xpath expr="." position="inside">
                  <script type="text/javascript" src="/academy/static/src/js/Chart.min.js"></script>
                  <script type="text/javascript" src="/academy/static/src/js/my_js.js"></script>
              </xpath>
