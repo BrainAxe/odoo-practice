@@ -10,6 +10,10 @@ class Academy(http.Controller):
             'teachers': Teachers.search([])
         })
 
+    @http.route('/academy/dashboard/', auth='public', website=True)
+    def dashboard(self, **kw):
+        return http.request.render('academy.dashboard')
+
     @http.route('/academy/<int:id>/', auth='public', website=True)
     def teacher(self, id):
         return '<h1>{} ({})</h1>'.format(id, type(id).__name__)
